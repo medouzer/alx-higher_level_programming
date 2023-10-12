@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
     new_matrix = [list(row) for row in matrix]
-    for a in range(len(new_matrix)):
+    for j in range(len(new_matrix)):
         for i in range(len(new_matrix)):
-            new_matrix[a][i] *= new_matrix[a][i]
+            new_matrix[j][i] *= new_matrix[j][i]
     return new_matrix

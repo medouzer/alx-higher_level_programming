@@ -2,6 +2,7 @@
 
 """Empty class"""
 
+
 class Square():
     """the class"""
     pass

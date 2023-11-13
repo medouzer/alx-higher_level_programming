@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" unit test for bases """
+""" the unit test for bases """
 import unittest
 from models.square import Square
 from models.rectangle import Rectangle
@@ -7,10 +7,10 @@ from models.base import Base
 
 
 class BaseTestCase(unittest.TestCase):
-    """ class for base test """
+    """ the class for base test """
     def setUp(self):
         """
-        Resets id
+        Resets id  
         """
         Base._Base__nb_objects = 0
 

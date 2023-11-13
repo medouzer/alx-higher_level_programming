@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" unit test for rectangle """
+""" the unit test for rectangle """
 import unittest
 from models.square import Square
 from models.rectangle import Rectangle
@@ -7,7 +7,7 @@ from models.base import Base
 
 
 class RectangleTestCase(unittest.TestCase):
-    """ test class for rectangle """
+    """ tests class for rectangle case """
     def setUp(self):
         """
         Resets id

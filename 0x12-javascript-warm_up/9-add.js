@@ -1,4 +1,4 @@
-#!/usr/bin/ode
+#!/usr/bin/node
 const { argv } = require('process');
 const nb1 = parseInt(argv[2]);
 const nb2 = parseInt(argv[3]);

@@ -1,13 +1,13 @@
 #!/usr/bin/node
 
 class Rectangle {
-  constructor(w, h) {
+  constructor (w, h) {
     if (w > 0 && h > 0) {
       this.width = w;
       this.height = h;
     }
   }
-  print() {
+  print () {
     for (let i = 0; i < this.height; i++) {
       let str = '';
       for (let j = 0; j < this.width; j++) {
@@ -16,12 +16,12 @@ class Rectangle {
       console.log(str);
     }
   }
-  rotate() {
+  rotate () {
     let tmp = this.height;
     this.height = this.width;
     this.width = tmp;
   }
-  double() {
+  double () {
     this.width = this.width * 2;
     this.height = this.height * 2;
   }

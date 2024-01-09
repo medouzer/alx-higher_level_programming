@@ -1,23 +1,18 @@
 #!/usr/bin/node
 
 const { argv } = require('process');
-let i = 0;
-let j;
 let nx;
-let str;
 
 nx = parseInt(argv[2]);
 
-if (isNaN(nx)) console.log('Missing size');
-else {
-  while (i < nx) {
-    j = 0;
-    str = '';
-    while (j < nx) {
+if (!isNaN(nx)) {
+  for (let i = 0; i < nx; i++) {
+    let str = '';
+    for (let j = 0; j < nx; j++) {
       str += 'X';
-      j++;
     }
     console.log(str);
-    i++;
   }
+} else {
+  console.log('Missing size');
 }

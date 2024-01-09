@@ -7,5 +7,6 @@ const { argv } = require('process');
 
 let a = parseInt(argv[2]);
 let b = parseInt(argv[3]);
+let sum = add(a, b);
 
-console.log(add(a, b));
+console.log(sum);

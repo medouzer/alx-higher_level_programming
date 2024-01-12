@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+this script to list states
+that has N in the first char
+"""
 import MySQLdb
 import sys
 

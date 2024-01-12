@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+this script to list states
+"""
 import MySQLdb
 import sys
 

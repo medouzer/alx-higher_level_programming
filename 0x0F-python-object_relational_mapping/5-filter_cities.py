@@ -6,7 +6,7 @@ import MySQLdb
 import sys
 
 
-def print_state(username, password, database, state):
+def print_state(username, password, database, state_name):
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -18,10 +18,11 @@ def print_state(username, password, database, state):
     query = "SELECT cities.name FROM cities\
         JOIN states ON cities.state_id = states.id\
             WHERE states.name = %s ORDER BY cities.id ASC"
-    cursor.execute(query, (state,))
+    cursor.execute(query, (state_name,))
     states = cursor.fetchall()
-    for state in states:
-        print(state)
+    city_names = ', '.join(state[0] for state in states)
+    # for state in states:
+    print(city_names)
     cursor.close()
     db.close()
 

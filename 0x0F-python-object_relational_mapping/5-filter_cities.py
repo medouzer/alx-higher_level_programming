@@ -6,7 +6,7 @@ import MySQLdb
 import sys
 
 
-def print_state(username, password, database, state_name):
+def filter_cities(username, password, database, state_name):
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -33,4 +33,4 @@ if __name__ == "__main__":
     database = sys.argv[3]
     state_name = sys.argv[4]
 
-    print_state(user, password, database, state_name)
+    filter_cities(user, password, database, state_name)

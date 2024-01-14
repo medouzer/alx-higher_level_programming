@@ -16,7 +16,7 @@ def print_state(username, password, database, state_name):
     )
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states WHERE name = '{:s}'\
-                ORDER BY id".format(state_name))
+                ORDER BY id ASC".format(state_name))
     states = cursor.fetchall()
     for state in states:
         print(state)

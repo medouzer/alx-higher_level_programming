@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
 this script to list state in the arg
 """
@@ -19,7 +19,8 @@ def print_state(username, password, database, state_name):
                 ORDER BY id ASC".format(state_name))
     states = cursor.fetchall()
     for state in states:
-        print(state)
+        if state[1] == state_name:
+            print(state)
     cursor.close()
     db.close()
 

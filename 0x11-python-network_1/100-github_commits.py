@@ -11,5 +11,5 @@ if __name__ == "__main__":
     # headers = {'Authorization': 'Bearer {}'.format(password)}
     req = requests.get(url).json()
     for i in req:
-        print(f"{i.json().get('sha')}: ", end="")
-        print(f"{i.json().get('commit').get('author').get('name')}")
+        print(f"{i.get('sha')}: ", end="")
+        print(f"{i.get('commit').get('author').get('name')}")

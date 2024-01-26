@@ -7,7 +7,7 @@ import sys
 if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
-    url = 'https://api.github.com/user'
+    url = f'https://api.github.com/users/{password}'
     auth = (username, password)
     req = requests.get(url, auth=auth)
-    print(req)
+    print(req.json().get('id'))

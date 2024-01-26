@@ -9,12 +9,12 @@ if __name__ == "__main__":
         q = sys.argv[1]
     else:
         q = ""
+    url = 'http://0.0.0.0:5000/search_user'
+    req = requests.post(url, data={'q': q})
     try:
-        url = 'http://0.0.0.0:5000/search_user'
-        req = requests.post(url, data={'q': q})
         data_json = req.json()
         if data_json:
-            print(f"[{data_json["id"]}] {data_json["name"]}")
+            print(f"[{data_json['id']}] {data_json['name']}")
         else:
             print("No result")
     except Exception:

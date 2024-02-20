@@ -1,4 +1,5 @@
 #!/usr/bin/node
+const { constants } = require('buffer');
 const request = require('request');
 const url = process.argv[2];
 
@@ -17,5 +18,15 @@ request.get(url, { json: true }, (err, code, data) => {
       }
     }
   }
-  console.log(users);
+  let flag = 0;
+  for (const key in users) {
+    if (flag == 0) {
+      console.log(`{ '${key}': ${users[key]},`);
+    } else if (flag == Object.keys(users).length - 1) {
+      console.log(`  '${key}': ${users[key]} }`);
+    } else {
+      console.log(`  '${key}': ${users[key]},`);
+    }
+    flag++;
+  }
 });

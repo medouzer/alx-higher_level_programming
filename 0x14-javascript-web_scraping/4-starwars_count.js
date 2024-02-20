@@ -8,7 +8,6 @@ request.get(url, { json: true }, (err, code, data) => {
     return;
   }
   let count = 0;
-  console.log(code.statusCode);
   const results = data.results;
   results.forEach((film) => {
     if (

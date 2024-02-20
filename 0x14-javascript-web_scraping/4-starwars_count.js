@@ -5,7 +5,6 @@ const url = process.argv[2];
 request.get(url, { json: true }, (err, code, data) => {
   if (err) {
     console.error(err);
-    return;
   } else {
     let count = 0;
     const results = data.results;

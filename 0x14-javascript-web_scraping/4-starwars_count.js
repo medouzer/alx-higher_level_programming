@@ -4,7 +4,7 @@ const url = process.argv[2];
 
 request.get(url, { json: true }, (err, code, data) => {
   if (err) {
-    console.log(err);
+    console.error(err);
     return;
   }
   let count = 0;

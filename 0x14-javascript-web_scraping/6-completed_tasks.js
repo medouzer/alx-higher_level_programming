@@ -17,15 +17,16 @@ request.get(url, { json: true }, (err, code, data) => {
       }
     }
   }
-  let flag = 0;
-  for (const key in users) {
-    if (flag === 0) {
-      console.log(`{ '${key}': ${users[key]},`);
-    } else if (flag === Object.keys(users).length - 1) {
-      console.log(`  '${key}': ${users[key]} }`);
-    } else {
-      console.log(`  '${key}': ${users[key]},`);
-    }
-    flag++;
-  }
+  //   let flag = 0;
+  //   for (const key in users) {
+  //     if (flag === 0) {
+  //       console.log(`{ '${key}': ${users[key]},`);
+  //     } else if (flag === Object.keys(users).length - 1) {
+  //       console.log(`  '${key}': ${users[key]} }`);
+  //     } else {
+  //       console.log(`  '${key}': ${users[key]},`);
+  //     }
+  //     flag++;
+  //   }
+  console.log(users);
 });

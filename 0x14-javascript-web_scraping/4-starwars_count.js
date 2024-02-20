@@ -9,7 +9,7 @@ request.get(url, { json: true }, (err, code, data) => {
   } else {
     let count = 0;
     const results = data.results;
-    results.forEach((film) => {
+    for (const film of results) {
       if (
         film.characters.includes(
           'https://swapi-api.alx-tools.com/api/people/18/'
@@ -17,7 +17,7 @@ request.get(url, { json: true }, (err, code, data) => {
       ) {
         count++;
       }
-    });
+    }
     console.log(count);
   }
 });

@@ -10,12 +10,11 @@ request.get(url, { json: true }, (err, code, data) => {
     let count = 0;
     const results = data.results;
     for (const film of results) {
-      if (
-        film.characters.includes(
-          'https://swapi-api.alx-tools.com/api/people/18/'
-        )
-      ) {
-        count++;
+      const filmschar = film.characters;
+      for (const charf of filmschar) {
+        if (charf.includes(18)) {
+          count++;
+        }
       }
     }
     console.log(count);
